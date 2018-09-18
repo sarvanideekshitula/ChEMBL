@@ -1,0 +1,5 @@
+chembl_id_lookup chembl_id
+molecule_dictionary molregno
+compound_structures molregno
+compound_records record_id
+drug_mechanism mec_id

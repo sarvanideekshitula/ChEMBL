@@ -1,0 +1,5 @@
+chembl_id_lookup chembl_id entity_type entity_id status
+molecule_dictionary molregno pref_name chembl_id max_phase molecule_type oral parental topical black_box_warning first_in_class chirality prodrug availabitily_type
+compound_structures molregno standard_inchi standard_inchi_key canonical_smiles
+compound_records record_id molregno doc_id compound_key compound_name src_id
+drug_mechanism mec_id record_id molregno mechanism_of_action tid site_id action_type direct_interaction molecular_mechanism disease_efficacy mechanism_comment selectivity_comment binding_site_comment
