@@ -18,12 +18,13 @@ def exportCSV(file):
             graph.run(query)
 
 def deleteProcessed():
-        query = "match (n:Processed) with n limit 100000 remove n:Processed return count(*) as processed"
+        query = "match (n:processed) with n limit 100000 remove n:processed return count(*) as processed"
         if query != "":
-            value = graph.run(query)
+            values = graph.run(query).data()
+            value = values[0]["processed"]
             while(value==100000):
-                value = graph.run(query)
-
+                values = graph.run(query).data()
+                value = values[0]["processed"]
 
 def relationships():
     csv = []
@@ -50,12 +51,33 @@ def relationships():
                 else:
                     for key in range(0, len(keys)):
                         if keys[key] == word and csv[key]!=file:
-                            query = "MATCH (p:" + csv[key] + ") with p MATCH (c:"+ file + "{" + word + ": p." + word +"}) where not p:Processed with c,p limit 100000 merge (p)-[:child_of]->(c) set p:Processed return count(*) as processed"
-                            value = graph.run(query)
+                            query = "MATCH (a:"+csv[key] + ") WITH a MATCH (p:" + file + "{" + word + ": a." + word +"} ) WHERE NOT p:processed WITH a, p LIMIT 100000 MERGE (p) - [:child_of] -> (a) SET p:processed RETURN COUNT(*) AS processed"
+                            #query = "MATCH (p:" + csv[key] + ") with p MATCH (c:"+ file + "{" + word + ": p." + word +"}) where not p:divya with c,p limit 100000 merge (p)-[:divya_of]->(c) set p:divya return count(*) as divya"
+                            values = graph.run(query).data()
+                            value = values[0]["processed"]
+                            print value
                             while(value==100000):
-                                value = graph.run(query)
+                                print value
+                                values = graph.run(query).data()
+                                value = values[0]["processed"]
+                            print value
                             deleteProcessed()
+                            print "Deleted processed"
+                            print csv[key] + word
+
+def delete():
+        query = "MATCH ()-[r:child_of]-() with r limit 100000 DELETE r return count(r) as deletedrelations"
+        if query != "":
+            values = graph.run(query).data()
+            value = values[0]["deletedrelations"]
+            while(value==100000):
+                values = graph.run(query).data()
+                value = values[0]["deletedrelations"]
+                print value
+            print "deleted"
 
 graph = Graph()
 #exportCSV("sch.txt")
 relationships()
+#delete()
+#deleteProcessed()
