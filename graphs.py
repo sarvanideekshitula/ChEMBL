@@ -77,7 +77,5 @@ def delete():
             print "deleted"
 
 graph = Graph()
-#exportCSV("sch.txt")
+exportCSV("sch.txt")
 relationships()
-#delete()
-#deleteProcessed()

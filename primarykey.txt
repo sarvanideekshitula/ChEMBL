@@ -12,6 +12,4 @@ activities activity_id
 assays assay_id
 target_components targcomp_id
 component_sequences component_id
-compound_properties molregno
-structural_alerts alert_id
 compound_structural_alerts cpd_str_alert_id
