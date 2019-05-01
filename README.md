@@ -33,3 +33,6 @@ After the execution of that file, the data we require is loaded into Neo4J. Now,
 The Cypher commands to get particular data corresponding to each drug in https://www.ebi.ac.uk/chembl/drugstore are there in commands.txt file.
 
 **Merge nodes**: The code to merge two nodes is in combine_nodes.py. We can run the file using the format present in readme_combine_nodes.
+
+This is how we merged the nodes:
+![alt text](https://github.com/sarvanideekshitula/ChEMBL/blob/master/chembl_diagram_with_Chembl_er_schema.png)
