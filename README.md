@@ -31,3 +31,5 @@ Now, start the graph.
 After the execution of that file, the data we require is loaded into Neo4J. Now, you can play with the graph by giving Cypher commands.
 
 The Cypher commands to get particular data corresponding to each drug in https://www.ebi.ac.uk/chembl/drugstore are there in commands.txt file.
+
+**Merge nodes**: The code to merge two nodes is in combine_nodes.py. We can run the file using the format present in readme_combine_nodes.
