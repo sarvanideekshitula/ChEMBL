@@ -1,0 +1,156 @@
+1---
+http://blog.rguha.net/?p=1442
+focus only on neo4j - Chembl - same as what is being done
+
+2---
+https://guides.neo4j.com/life-science-import
+neo4j guide on lifesciences, includes examples on sparql + cypher queries, disease ontologies, drug repurposing, across dataset queries etc.
+
+FROM:
+The druggable genome and support for target identification and validation in drug development
+Chris Finan1,2,*, Anna Gaulton3,*, Felix A. Kruger1,4, R. Thomas Lumbers1,2, Tina Shah1,2, Jorgen Engmann1,2, Luana Galver5, Ryan Kelley5, Anneli Karlsson3, Rita Santos3,†, John P. Overington3,4,‡, Aroon D. Hingorani1,2,*,‡ and Juan P. Casas2,*,‡
+ See all authors and affiliations
+
+Science Translational Medicine  29 Mar 2017:
+Vol. 9, Issue 383, eaag1166
+DOI: 10.1126/scitranslmed.aag1166
+
+
+3-------
+Use of Graph Database for the Integration of Heterogeneous Biological Data
+Byoung-Ha Yoon,1,2 Seon-Kyu Kim,1 and Seon-Young Kimcorresponding author1,2
+Genomics Inform. 2017 Mar; 15(1): 19–27.
+Published online 2017 Mar 29. doi: 10.5808/GI.2017.15.1.19
+PMCID: PMC5389944
+PMID: 28416946
+
+We collected various biological data (protein-protein interaction, drug-target, gene-disease, etc.) from several existing sources, removed duplicate and redundant data, and finally constructed a graph database containing 114,550 nodes and 82,674,321 relationships. When we tested the query execution performance of MySQL versus Neo4j, we found that Neo4j outperformed MySQL in all cases.The results show that using graph-based databases, such as Neo4j, is an efficient way to store complex biological relationships. Moreover, querying a graph database in diverse ways has the potential to reveal novel relationships among heterogeneous biological data.
+
+4------
+https://hackdash.org/projects/59ee8c4d87d0970a0e0a3cf4
+
+The goal of this project is to use the REST API Methods from ChEMBL 
+to pull in compound, target, and assay data in JSON format.
+
+5------
+An Integrated Data Driven Approach to Drug Repositioning Using Gene-Disease Associations
+Joseph Mullen, Simon J. Cockell, Peter Woollard, Anil Wipat 
+Published: May 19, 2016https://doi.org/10.1371/journal.pone.0155811
+
+Drug development is both increasing in cost whilst decreasing in productivity. There is a general acceptance that the current paradigm of R&D needs to change. One alternative approach is drug repositioning. With target-based approaches utilised heavily in the field of drug discovery, it becomes increasingly necessary to have a systematic method to rank gene-disease associations. Although methods already exist to collect, integrate and score these associations, they are often not a reliable reflection of expert knowledge. Furthermore, the amount of data available in all areas covered by bioinformatics is increasing dramatically year on year. It thus makes sense to move away from more generalised hypothesis driven approaches to research to one that allows data to generate their own hypothesis. We introduce an integrated, data driven approach to drug repositioning. We first apply a Bayesian statistics approach to rank 309,885 gene-disease associations using existing knowledge. Ranked associations are then integrated with other biological data to produce a semantically-rich drug discovery network. Using this network, we show how our approach identifies diseases of the central nervous system (CNS) to be an area of interest. CNS disorders are identified due to the low numbers of such disorders that currently have marketed treatments, in comparison to other therapeutic areas. 
+Infer drug-disease relations that are not captured in the network. We identify and rank 275,934 drug-disease has_indication associations after filtering those that are more likely to be side effects, whilst commenting on the top ranked associations in more detail. 
+The dataset has been created in Neo4j and is available for download at https://bitbucket.org/ncl-intbio/genediseaserepositioning along with a Java implementation of the searching algorithm
+
+
+6-------
+https://arxiv.org/pdf/1607.00378.pdf
+
+Michal Nowotka,George Papadatos, Mark Davies, Nathan Dedman, Anne Hersey
+
+how Python can be leveraged to streamline the CHEMBM - curation, modelling and dissemination of drug discovery data as well as the development of innovative, freely available tools for the related scientific community
+
+not completely related to current work but very informative
+
+7--------
+Discovery of medicinal molecules based on similarity networks and metrics
+ICS5200 - Dissertation Progress Report
+Joseph D’Emanuele
+Intelligent Computer Systems
+Faculty of ICT
+University of Malta
+
+The first practical task was to create a ligand similarity graph. For this task, one hundred random compounds in
+SMILES format from the ZINC database were downloaded and a Morgan fingerprint for each was computed. Then, an
+upper triangular similarity matrix using Tanimoto function was created and was used to build a graph in Neo4j, a highly
+scalable native graph database. Similarly, a sample of protein FASTA files were used to create a protein similarity
+matrix using BLAST algorithm and imported into Neo4j to graph the relationship between proteins.
+Next, the ChEMBL database was used to extract ligandprotein bindings. This allowed the bridging between the ligands and the proteins graphs.
+
+9---------
+How do drug targets regulate biological pathways?
+Development of an open source workflow to integrate drug regulation with pathway knowledge
+
+Bachelor thesis by A.C.I. van Steen, Bachelor Biomedical Sciences-Molecular Life Sciences
+Maastricht University, Supervisor: M. Summer-Kutmon, PhD, Department of Bioinformatics-BiGCaT, Maastricht University
+20 April - 3 July 2015
+
+The current study integrates drug targets from DrugBank with pathways from the human pathway collection of WikiPathways to study the regulation
+of drugs on biological pathways. Software was developed to select the relevant data and to unify the identifiers. The selected
+pathways, genes involved in these pathways, drugs and drug targets were integrated in one large network using a Neo4J graph database. 
+This network was analysed and used to answer five research questions. These questions explore the size of the network, number of genes in
+biological pathways, number of targets per drug as well as the visualisation of highly targeted pathways and the genes and pathways targeted 
+by a selected drug category. 
+
+10---------
+GenCoNet – A Graph Database for the Analysis of Comorbidities by Gene Networks
+Alban Shoshi, Ralf Hofestädt, Olga Zolotareva, Marcel Friedrichs, Alex Maier, Vladimir A. Ivanisenko, Victor E. Dosenko,Elena Yu Bragina
+he prevalence of comorbid diseases poses a major health issue for millions of people worldwide and an enormous socio-economic burden for society. The molecular mechanisms for the development of comorbidities need to be investigated. For this purpose, a workflow system was developed to aggregate data on biomedical entities from heterogeneous data sources. The process of integrating and merging all data sources of the workflow system was implemented as a semi-automatic pipeline that provides the import, fusion, and analysis of the highly connected biomedical data in a Neo4j database GenCoNet. As a starting point, data on the common comorbid diseases essential hypertension and bronchial asthma was integrated.
+GenCoNet (https://genconet.kalis-amts.de) is a curated database that provides a better understanding of hereditary bases of comorbidities.
+
+
+11-------------
+Graph Model for the Identification of Multi-target Drug Information for Culinary Herbs
+
+nternational Work-Conference on Bioinformatics and Biomedical Engineering
+IWBBIO 2019: Bioinformatics and Biomedical Engineering pp 498-512
+Suganya Chandrababu,Dhundy Bastola  
+First Online: 13 April 2019
+
+Drug discovery strategies based on natural products are re-emerging as a promising approach. Due to its multi-target therapeutic properties, natural compounds in herbs produce greater levels of efficacy with fewer adverse effects and toxicity than monotherapies using synthetic compounds. However, the study of these medicinal herbs featuring multi-components and multi-targets requires an understanding of complex relationships, which is one of the fundamental goals in the discovery of drugs using natural products. Relational database systems such as the MySQL and Oracle store data in multiple tables, which are less efficient when data such as the one from natural compounds contain many relationships requiring several joins of large tables. Recently, there has been a noticeable shift in paradigm to NoSQL databases, especially graph databases, which was developed to natively represent complex high throughput dynamic relations. In this paper, we demonstrate the feasibility of using a graph-based database to capture the dynamic biological relationships of natural plant products by comparing the performance of MySQL and one of the most widely used NoSQL graph databases called Neo4j. Using this approach we have developed a graph database HerbMicrobeDB (HbMDB), and integrated herbal drug information, herb-targets, metabolic pathways, gut-microbial interactions and bacterial-genome information, from several existing resources.
+
+12 --------
+Practice and Challenges of Building a Semantic Framework for Chemogenomics Research
+Volume32, Issue11‐12
+Special Issue: Chemogenomics
+December 2013
+To be checked - 
+
+
+13-------------
+https://neo4j.com/blog/connecting-dots-in-early-drug-discovery-at-novartis/
+neo4j graph connect 
+By Stephan Reiling, Senior Scientist, Novartis | June 20, 2018
+Reading time: 17 minutes Editor’s Note: This presentation was given by Stephan Reiling at GraphConnect San Francisco in October 2016.
+
+Stephan Reiling describes some of the ways that a major pharmaceutical company conducts the search for medical compounds, and the significant role that graph database technology plays in that effort.
+
+The underlying problem is how to construct a system of scalable biological knowledge. 
+
+This means not just connecting vast amounts of heterogeneous data, but enabling researchers to construct a query for a particular kind of triangular relationship: The nodes are chemical compounds, specific biological entities, and diseases described in the research literature, and the system has to use the uncertainty in key links as part of the query.
+A specific way graph technology furthers this effort is that it enables the system to capture the strength of the relationship between terms in a medical research text by encoding it in the properties of a graph connecting these terms. 
+
+14---------------
+biochem4j: Integrated and extensible biochemical knowledge through graph databases
+PLOS ONE 
+Neil Swainston , Riza Batista-Navarro, Pablo Carbonell, Paul D. Dobson, Mark Dunstan, Adrian J. Jervis, Maria Vinaixa, Alan R. Williams, Sophia Ananiadou, Jean-Loup Faulon, Pedro Mendes, Douglas B. Kell, Nigel S. Scrutton, Rainer Breitling
+Published: July 14, 2017https://doi.org/10.1371/journal.pone.0179130
+
+Although many of the resources provide web-service interfaces for computational access, performing federated queries across databases remains a non-trivial but essential activity in interdisciplinary systems and synthetic biology programmes. What is needed are integrated repositories to catalogue both biological entities and–crucially–the relationships between them. Such a resource should be extensible, such that newly discovered relationships–for example, those between novel, synthetic enzymes and non-natural products–can be added over time. With the introduction of graph databases, the barrier to the rapid generation, extension and querying of such a resource has been lowered considerably. With a particular focus on metabolic engineering as an illustrative application domain, biochem4j, freely available at http://biochem4j.org, is introduced to provide an integrated, queryable database that warehouses chemical, reaction, enzyme and taxonomic data from a range of reliable resources. The biochem4j framework establishes a starting point for the flexible integration and exploitation of an ever-wider range of biological data sources, from public databases to laboratory-specific experimental datasets, for the benefit of systems biologists, biosystems engineers and the wider community of molecular biologists and biological chemists.
+
+15---------
+Drug target ontology to classify and integrate drug discovery data
+Journal of Biomedical Semantics 2017
+
+We have developed a framework to integrate, navigate, and analyze drug discovery data based on formalized and standardized classifications and annotations of druggable protein targets, the Drug Target Ontology (DTO). DTO was constructed by extensive curation and consolidation of various resources. DTO classifies the four major drug target protein families, GPCRs, kinases, ion channels and nuclear receptors, based on phylogenecity, function, target development level, disease association, tissue expression, chemical ligand and substrate characteristics, and target-family specific characteristics. We use the D3.js library for the interactive visualization of our DTO as part of the Neo4J graphical database solution.
+
+
+16--------
+Metabox: A Toolbox for Metabolomic Data Analysis, Interpretation and Integrative Exploration
+PLOS One
+Kwanjeera Wanichthanarak , Sili Fan , Dmitry Grapov, Dinesh Kumar Barupal, Oliver Fiehn 
+Published: January 31, 2017
+Similar to genomic and proteomic platforms, metabolomic data acquisition and analysis is becoming a routine approach for investigating biological systems. However, computational approaches for metabolomic data analysis and integration are still maturing. Metabox is a bioinformatics toolbox for deep phenotyping analytics that combines data processing, statistical analysis, functional analysis and integrative exploration of metabolomic data within proteomic and transcriptomic contexts. With the number of options provided in each analysis module, it also supports data analysis of other ‘omic’ families. The toolbox is an R-based web application, and it is freely available at http://kwanjeeraw.github.io/metabox/ under the GPL-3 license
+n. A Neo4j graph database (http://neo4j.com/) is used for storing information of molecular entities and their relationships. In this version, the graph database is available for Homo sapiens. Upon installation, it will automatically access this pre-compiled human database on our server.
+n. A Neo4j graph database (http://neo4j.com/) is used for storing information of molecular entities and their relationships. In this version, the graph database is available for Homo sapiens. Upon installation, it will automatically access this pre-compiled human database on our server.
+
+
+17--------
+The MetaProteomeAnalyzer: A Powerful Open-Source Software Suite for Metaproteomics Data Analysis and Interpretation
+Thilo Muth†, Alexander Behne‡, Robert Heyer‡, Fabian Kohrs‡, Dirk Benndorf‡, Marcus Hoffmann†, Miro Lehtevä§⊥, Udo Reichl†‡, Lennart Martens*§⊥, and Erdmann Rapp*†
+† Max Planck Institute for Dynamics of Complex Technical Systems, 39106 Magdeburg, Germany
+‡ Chair of Bioprocess Engineering, Otto von Guericke University Magdeburg, 39106 Magdeburg, Germany
+§ Department of Medical Protein Research, VIB, B-9000 Ghent, Belgium
+⊥ Department of Biochemistry, Ghent University, B-9000 Ghent, Belgium
+Journal Of  Proteome Research, 2015, 14 (3), pp 1557–1565
+We developed a dedicated software suite, the MetaProteomeAnalyzer, an intuitive open-source tool for metaproteomics data analysis and interpretation, which includes multiple search engines and the feature to decrease data redundancy by grouping protein hits to so-called meta-proteins. We also designed a graph database back-end for the MetaProteomeAnalyzer to allow seamless analysis of results. The functionality of the MetaProteomeAnalyzer is demonstrated using a sample of a microbial community taken from a biogas plant.
+To be checked - 
