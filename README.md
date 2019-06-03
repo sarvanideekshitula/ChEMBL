@@ -15,9 +15,9 @@
 
 **Step-3**: Open Neo4j-Desktop and create new graph and hit manage. Go to the settings and change the following lines.
 
-1. Uncomment this line "dbms.directories.import=import"
-2. Change the value of this line "dbms.security.auth_enabled=false" to true.
-3. Change the value of this line "dbms.memory.heap.max_size=1G" to 40G
+1. Comment this line "dbms.directories.import=import"
+2. Change the value of this line "dbms.security.auth_enabled=true" to false.
+3. Change the value of this line "dbms.memory.heap.max_size=1G" to 10G
 4. Add this line "dbms.security.allow_csv_import_from_file_urls=true"
 
 Now, start the graph.
