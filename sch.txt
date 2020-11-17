@@ -13,5 +13,5 @@ activities activity_id molregno assay_id standard_type standard_units standard_r
 assays assay_id description assay_type assay_organism tid src_id chembl_id
 target_components tid component_id targcomp_id homologue
 component_sequences component_id component_type accession	sequence	sequence_md5sum	description	tax_id	organism
-compound_properties molregno mw_freebase alogp hba hbd psa rtb ro3_pass num_ro5_violations acd_most_apka acd_most_bpka acd_logp acd_logd molecular_species full_mwt aromatic_rings heavy_atoms qed_weighted mw_monoisotopic full_molformula hba_lipinski hbd_lipinski num_lipinski_ro5_violations
+compound_properties molregno mw_freebase alogp hba hbd psa rtb ro3_pass num_ro5_violations cx_most_apka cx_most_bpka cx_logp cx_logd molecular_species full_mwt aromatic_rings heavy_atoms qed_weighted mw_monoisotopic full_molformula hba_lipinski hbd_lipinski num_lipinski_ro5_violations
 compound_structural_alerts cpd_str_alert_id molregno alert_id
