@@ -1,5 +1,5 @@
 chembl_id_lookup chembl_id entity_type entity_id status
-molecule_dictionary molregno pref_name chembl_id max_phase molecule_type oral parental topical black_box_warning first_in_class chirality prodrug availabitily_type
+molecule_dictionary molregno pref_name chembl_id max_phase molecule_type oral parenteral topical black_box_warning first_in_class chirality prodrug availability_type
 compound_structures molregno standard_inchi standard_inchi_key canonical_smiles
 compound_records record_id molregno doc_id compound_key compound_name src_id
 molecule_synonyms molregno molsyn_id synonyms
